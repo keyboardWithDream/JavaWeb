@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L1_CreateProject_Servlet/L1_CreateProject_Servlet.iml" filepath="$PROJECT_DIR$/L1_CreateProject_Servlet/L1_CreateProject_Servlet.iml" />
     </modules>
   </component>
 </project>
