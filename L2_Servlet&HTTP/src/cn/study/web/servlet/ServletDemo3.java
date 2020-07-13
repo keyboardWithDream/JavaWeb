@@ -12,6 +12,9 @@ import java.io.IOException;
  * @author Harlan
  * @date 2020/7/12 22:01
  */
+//@WebServlet("/demo3/123/123")
+//@WebServlet("*.xxx")
+
 @WebServlet("/demo3")
 public class ServletDemo3 extends HttpServlet {
 
@@ -25,5 +28,6 @@ public class ServletDemo3 extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doPost(req, resp);
         System.out.println("doPost方法执行...");
+        System.out.println(req.getHeader("Referer"));
     }
 }
