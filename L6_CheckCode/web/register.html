@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<img src="/l6/checkCode" id="checkCode"/>
+<a href="javascript:void(0);" id="change">看不清？换一张</a>
+</body>
+<script>
+    window.onload = function () {
+        const img = document.getElementById("checkCode");
+        img.onclick = function(){
+            const date = new Date().getTime();
+            img.src = "/l6/checkCode?"+date;
+        }
+        const a = document.getElementById("change");
+        a.onclick = function () {
+            const date = new Date().getTime();
+            img.src = "/l6/checkCode?"+date;
+        }
+    }
+</script>
+</html>
