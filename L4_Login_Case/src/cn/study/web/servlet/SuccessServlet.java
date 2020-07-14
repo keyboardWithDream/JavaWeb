@@ -19,7 +19,7 @@ public class SuccessServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-        resp.setContentType("utf-8");
+        resp.setContentType("text/html");
         User user = (User) req.getAttribute("user");
         resp.getWriter().write("<h1>" + user.getUsername() +"，欢迎登录！</h1>");
     }

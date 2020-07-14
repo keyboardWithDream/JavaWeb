@@ -2,7 +2,7 @@ package cn.study.test;
 
 import cn.study.dao.UserDao;
 import cn.study.domain.User;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * 测试类

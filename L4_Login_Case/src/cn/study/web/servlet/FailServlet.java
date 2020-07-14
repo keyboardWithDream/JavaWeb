@@ -19,7 +19,7 @@ public class FailServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-        resp.setContentType("utf-8");
+        resp.setContentType("text/html");
         resp.getWriter().write("<h1>登录失败！用户名或密码错误！</h1>");
     }
 
