@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="L9_Cookie:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/L9_Cookie_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="L9_Cookie/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="L9_Cookie" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
