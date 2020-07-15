@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/L4_Login_Case/L4_Login_Case.iml" filepath="$PROJECT_DIR$/L4_Login_Case/L4_Login_Case.iml" />
       <module fileurl="file://$PROJECT_DIR$/L5_Response/L5_Response.iml" filepath="$PROJECT_DIR$/L5_Response/L5_Response.iml" />
       <module fileurl="file://$PROJECT_DIR$/L6_CheckCode/L6_CheckCode.iml" filepath="$PROJECT_DIR$/L6_CheckCode/L6_CheckCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L7_ServletContext/L7_ServletContext.iml" filepath="$PROJECT_DIR$/L7_ServletContext/L7_ServletContext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L8_FileDownload/L8_FileDownload.iml" filepath="$PROJECT_DIR$/L8_FileDownload/L8_FileDownload.iml" />
     </modules>
   </component>
 </project>
