@@ -102,5 +102,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="TomcatEE" level="application" />
   </component>
 </module>

@@ -1,11 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="L5_Response:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/L5_Response_war_exploded</output-path>
+  <artifact type="exploded-war" name="L11_JSP:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/L11_JSP_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="L5_Response/web/Web" />
+      <element id="javaee-facet-resources" facet="L11_JSP/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="L5_Response" />
+          <element id="module-output" name="L11_JSP" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="application" name="TomcatEE" />

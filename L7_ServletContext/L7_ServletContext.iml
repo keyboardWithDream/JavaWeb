@@ -20,5 +20,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 10.0.0-M7" level="application_server_libraries" />
+    <orderEntry type="library" name="TomcatEE" level="application" />
   </component>
 </module>
