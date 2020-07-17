@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="L15_JSTL:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/L15_JSTL_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="L15_JSTL/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="L15_JSTL" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-compat-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-jstlel-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-spec-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/standard.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
