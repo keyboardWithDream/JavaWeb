@@ -17,7 +17,6 @@
           <element id="file-copy" path="$PROJECT_DIR$/L4_Login_Case/web/WEB-INF/lib/spring-tx-5.1.10.RELEASE.jar" />
           <element id="library" level="module" name="JUnit4" module-name="L4_Login_Case" />
           <element id="file-copy" path="$PROJECT_DIR$/L4_Login_Case/web/WEB-INF/lib/commons-beanutils-1.9.4.jar" />
-          <element id="library" level="application" name="TomcatEE" />
         </element>
       </element>
     </root>

@@ -7,6 +7,17 @@
         <element id="directory" name="classes">
           <element id="module-output" name="L13_Login_Case" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="JUnit4" module-name="L13_Login_Case" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/commons-beanutils-1.9.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/druid-1.0.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/mysql-connector-java-8.0.20.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/spring-beans-5.1.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/spring-core-5.1.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/spring-jdbc-5.1.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L13_Login_Case/web/WEB-INF/lib/spring-tx-5.1.10.RELEASE.jar" />
+        </element>
       </element>
     </root>
   </artifact>

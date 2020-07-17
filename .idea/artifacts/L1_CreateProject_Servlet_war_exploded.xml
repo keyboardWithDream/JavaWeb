@@ -7,9 +7,7 @@
         <element id="directory" name="classes">
           <element id="module-output" name="L1_CreateProject_Servlet" />
         </element>
-        <element id="directory" name="lib">
-          <element id="library" level="application" name="TomcatEE" />
-        </element>
+        <element id="directory" name="lib" />
       </element>
     </root>
   </artifact>
