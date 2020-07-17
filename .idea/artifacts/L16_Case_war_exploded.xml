@@ -1,0 +1,34 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="L16_Case:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/L16_Case_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="L16_Case/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="L16_Case" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/c3p0-0.9.5.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/commons-beanutils-1.9.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/druid-1.0.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/el-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/jasper-el.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/jasper.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/jaspic-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/mysql-connector-java-8.0.20.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/spring-beans-5.1.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/spring-core-5.1.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/spring-jdbc-5.1.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/spring-tx-5.1.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/taglibs-standard-compat-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -8,12 +8,16 @@
           <element id="module-output" name="L15_JSTL" />
         </element>
         <element id="directory" name="lib">
-          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-compat-1.2.5.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-impl-1.2.5.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-jstlel-1.2.5.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/taglibs-standard-spec-1.2.5.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/jstl.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/taglibs-standard-compat-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/el-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/jasper-el.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/jasper.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L15_JSTL/web/WEB-INF/lib/jaspic-api.jar" />
         </element>
       </element>
     </root>

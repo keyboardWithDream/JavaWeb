@@ -7,7 +7,7 @@
     <!--配置Servlet-->
     <servlet>
         <servlet-name>demo1</servlet-name>
-        <servlet-class>cn.study.web.servlet.ServletDemo1</servlet-class>
+        <servlet-class>cn.study.l16.servlet.ServletDemo1</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>demo1</servlet-name>
@@ -16,7 +16,7 @@
 
     <servlet>
         <servlet-name>demo2</servlet-name>
-        <servlet-class>cn.study.web.servlet.ServletDemo2</servlet-class>
+        <servlet-class>cn.study.l16.servlet.ServletDemo2</servlet-class>
         <!-- 指定Servlet的创建时机
         1.第一次访问时创建值为负数
         2.在服务器启动时创建值为0或正整数
