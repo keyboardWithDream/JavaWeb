@@ -2,6 +2,8 @@ package cn.study.l7.web.servlet;
 
 
 import cn.study.l7.domain.User;
+import cn.study.l7.web.service.UserService;
+import cn.study.l7.web.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;
@@ -28,7 +30,9 @@ public class UpdateUserServlet extends HttpServlet {
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
-
+        UserService service = new UserServiceImpl();
+        service.updateUser(user);
+        resp.sendRedirect(req.getContextPath()+"/userListServlet");
     }
 
     @Override

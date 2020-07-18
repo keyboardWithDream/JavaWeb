@@ -33,4 +33,12 @@ public class JdbcUtilsTest {
         UserDao userDao = new UserDaoImpl();
         System.out.println(userDao.findUserById(1));
     }
+
+    @Test
+    public void updateUser(){
+        UserDao userDao = new UserDaoImpl();
+        User user = new User(2,"萧敬腾", "123456","萧敬腾","女", 11, "台湾","1234312","123123@qq.com");
+        System.out.println(user);
+        userDao.updateUser(user);
+    }
 }

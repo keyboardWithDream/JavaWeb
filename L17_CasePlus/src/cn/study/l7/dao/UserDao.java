@@ -41,4 +41,10 @@ public interface UserDao {
      * @return 用户信息
      */
     public User findUserById(int id);
+
+    /**
+     * 通过id查询用户更新信息
+     * @param user 用户id
+     */
+    public void updateUser(User user);
 }

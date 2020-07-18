@@ -41,4 +41,10 @@ public interface UserService {
      * @return 用户信息
      */
     public User findUserById(int id);
+
+    /**
+     * 通过id查询更新信息
+     * @param user 用户
+     */
+    public void updateUser(User user);
 }
