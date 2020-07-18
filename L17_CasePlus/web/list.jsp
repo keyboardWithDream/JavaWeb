@@ -31,8 +31,16 @@
     </style>
     <script>
         function deleteUser(id) {
-            if (confirm("确定删除吗?")){
-                location.href = "${pageContext.request.contextPath}/delete?id="+id;
+            if (confirm("确定删除吗?")) {
+                location.href = "${pageContext.request.contextPath}/delete?id=" + id;
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("delUsers").onclick = function () {
+                if (confirm("确定删除吗?")){
+                    document.getElementById("form").submit();
+                }
             }
         }
     </script>
@@ -77,46 +85,49 @@
     </div>
     <div style="float: right; margin: 5px">
         <a class="btn btn-primary" href="${pageContext.request.contextPath}/add.jsp">添加用户</a>
-        <a class="btn btn-danger" href="#">删除选中</a>
+        <a class="btn btn-danger" href="javascript:void (0);" id="delUsers">删除选中</a>
     </div>
-    <table border="1" class="table table-bordered table-hover">
-        <tr class="success">
-            <th>选择</th>
-            <th>ID</th>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>年龄</th>
-            <th>籍贯</th>
-            <th>QQ</th>
-            <th>邮箱</th>
-            <th colspan="2">操作</th>
-        </tr>
-        <c:if test="${not empty users}">
-            <c:forEach items="${users}" var="user">
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>${user.id}</td>
-                    <td>${user.name}</td>
-                    <td>${user.gender}</td>
-                    <td>${user.age}</td>
-                    <td>${user.address}</td>
-                    <td>${user.qq}</td>
-                    <td>${user.email}</td>
-                    <td>
-                        <a class="btn btn-default" href="${pageContext.request.contextPath}/findUser?id=${user.id}" id="update">修改</a>
-                    </td>
-                    <td>
-                        <a class="btn btn-danger" href="javascript:deleteUser(${user.id});" id="delete">删除</a>
-                    </td>
-                </tr>
-            </c:forEach>
-        </c:if>
-        <c:if test="${empty users}">
-            <tr>
-                <td colspan="9" align="center">目前暂无数据</td>
+    <form id="form" action="${pageContext.request.contextPath}/delUsers" method="post">
+        <table border="1" class="table table-bordered table-hover">
+            <tr class="success">
+                <th>选择</th>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>籍贯</th>
+                <th>QQ</th>
+                <th>邮箱</th>
+                <th colspan="2">操作</th>
             </tr>
-        </c:if>
-    </table>
+            <c:if test="${not empty users}">
+                <c:forEach items="${users}" var="user">
+                    <tr>
+                        <td><input type="checkbox" name="ids" value="${user.id}"></td>
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.gender}</td>
+                        <td>${user.age}</td>
+                        <td>${user.address}</td>
+                        <td>${user.qq}</td>
+                        <td>${user.email}</td>
+                        <td>
+                            <a class="btn btn-default" href="${pageContext.request.contextPath}/findUser?id=${user.id}"
+                               id="update">修改</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" href="javascript:deleteUser(${user.id});" id="delete">删除</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </c:if>
+            <c:if test="${empty users}">
+                <tr>
+                    <td colspan="9" align="center">目前暂无数据</td>
+                </tr>
+            </c:if>
+        </table>
+    </form>
     <div align="center">
         <nav aria-label="Page navigation">
             <ul class="pagination">

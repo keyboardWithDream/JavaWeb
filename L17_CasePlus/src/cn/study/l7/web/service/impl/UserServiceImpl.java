@@ -50,4 +50,12 @@ public class UserServiceImpl implements UserService {
         userDao.updateUser(user);
     }
 
+    @Override
+    public void delUsers(String[] ids) {
+        UserDao userDao = new UserDaoImpl();
+        for (String id : ids) {
+            userDao.deleteUser(Integer.parseInt(id));
+        }
+    }
+
 }
