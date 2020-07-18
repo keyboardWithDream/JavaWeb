@@ -15,7 +15,7 @@ public class UserDao {
     /**
      * 声明JdbcTemplate公用
      */
-    private JdbcTemplate template = new JdbcTemplate(JdbcUtils.getDataSource());
+    private final JdbcTemplate template = new JdbcTemplate(JdbcUtils.getDataSource());
 
     /**
      * 登录方法
@@ -27,9 +27,9 @@ public class UserDao {
             //编写sql
             String sql = "SELECT * FROM USER WHERE username = ? and password = ?";
             //调用query方法
-            User user = template.queryForObject(sql,
+            var user = template.queryForObject(sql,
                     new BeanPropertyRowMapper<User>(User.class),
-                    loginUser.getUsername(),loginUser.getPassword());
+                    loginUser.getUsername(), loginUser.getPassword());
             return user;
         }catch (Exception e){
             e.printStackTrace();

@@ -1,0 +1,25 @@
+package cn.study.l7.dao;
+
+import cn.study.l7.domain.User;
+
+import java.util.List;
+
+/**
+ * @author Harlan
+ * @date 2020/7/18 15:25
+ */
+public interface UserDao {
+
+    /**
+     * 查询所有用户信息
+     * @return 用户信息
+     */
+    public List<User> findAll();
+
+    /**
+     * 查询用户
+     * @param user 用户信息
+     * @return 真实用户
+     */
+    public User login(User user);
+}
