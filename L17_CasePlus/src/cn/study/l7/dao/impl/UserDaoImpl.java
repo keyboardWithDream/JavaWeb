@@ -38,4 +38,11 @@ public class UserDaoImpl implements UserDao {
             return null;
         }
     }
+
+    @Override
+    public void addUser(User user) {
+        String sql = "INSERT INTO user VALUES(null,?,?,?,?,?,?,?,?)";
+        template.update(sql,user.getName(),user.getGender(),user.getAge(),user.getAddress(),user.getQq(),user.getEmail(),user.getUsername(),user.getPassword());
+
+    }
 }

@@ -27,7 +27,7 @@
 <body>
 <div class="container">
     <center><h3>添加联系人页面</h3></center>
-    <form action="" method="post">
+    <form action="${pageContext.request.contextPath}/addUser" method="post">
         <div class="form-group">
             <label for="name">姓名：</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="请输入姓名">
@@ -35,8 +35,8 @@
 
         <div class="form-group">
             <label>性别：</label>
-            <input type="radio" name="sex" value="男" checked="checked"/>男
-            <input type="radio" name="sex" value="女"/>女
+            <input type="radio" name="gender" value="男" checked="checked"/>男
+            <input type="radio" name="gender" value="女"/>女
         </div>
 
         <div class="form-group">
@@ -47,9 +47,14 @@
         <div class="form-group">
             <label for="address">籍贯：</label>
             <select name="address" class="form-control" id="address">
-                <option value="陕西">陕西</option>
+                <option value="重庆">重庆</option>
                 <option value="北京">北京</option>
                 <option value="上海">上海</option>
+                <option value="广州">广州</option>
+                <option value="成都">成都</option>
+                <option value="杭州">杭州</option>
+                <option value="香港">香港</option>
+                <option value="澳门">澳门</option>
             </select>
         </div>
 
@@ -61,6 +66,16 @@
         <div class="form-group">
             <label for="email">Email：</label>
             <input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱地址"/>
+        </div>
+
+        <div class="form-group">
+            <label for="username">用户名：</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名"/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">密码：</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="请输入密码"/>
         </div>
 
         <div class="form-group" style="text-align: center">

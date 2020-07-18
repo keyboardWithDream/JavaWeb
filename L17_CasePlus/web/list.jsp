@@ -69,7 +69,7 @@
         </form>
     </div>
     <div style="float: right; margin: 5px">
-        <a class="btn btn-primary" href="#">添加用户</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}/add.jsp">添加用户</a>
         <a class="btn btn-danger" href="#">删除选中</a>
     </div>
     <table border="1" class="table table-bordered table-hover">

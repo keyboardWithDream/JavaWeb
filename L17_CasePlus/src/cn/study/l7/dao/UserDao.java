@@ -22,4 +22,10 @@ public interface UserDao {
      * @return 真实用户
      */
     public User login(User user);
+
+    /**
+     * 添加用户
+     * @param user 用户
+     */
+    public void addUser(User user);
 }
