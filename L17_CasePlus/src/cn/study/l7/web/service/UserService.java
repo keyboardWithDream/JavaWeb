@@ -1,5 +1,6 @@
 package cn.study.l7.web.service;
 
+import cn.study.l7.domain.Page;
 import cn.study.l7.domain.User;
 
 import java.util.List;
@@ -53,4 +54,12 @@ public interface UserService {
      * @param ids 用户id
      */
     public void delUsers(String[] ids);
+
+    /**
+     * 分页查询
+     * @param currentPage 当前页码
+     * @param rows 每页显示行数
+     * @return PageBean
+     */
+    public Page<User> findUsersByPage(String currentPage, String rows);
 }

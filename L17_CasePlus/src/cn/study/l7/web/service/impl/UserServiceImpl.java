@@ -2,6 +2,7 @@ package cn.study.l7.web.service.impl;
 
 import cn.study.l7.dao.UserDao;
 import cn.study.l7.dao.impl.UserDaoImpl;
+import cn.study.l7.domain.Page;
 import cn.study.l7.domain.User;
 import cn.study.l7.web.service.UserService;
 
@@ -56,6 +57,29 @@ public class UserServiceImpl implements UserService {
         for (String id : ids) {
             userDao.deleteUser(Integer.parseInt(id));
         }
+    }
+
+    @Override
+    public Page<User> findUsersByPage(String _currentPage, String _rows) {
+        int currentPage = Integer.parseInt(_currentPage);
+        int rows = Integer.parseInt(_rows);
+        Page<User> userPage = new Page<>();
+        userPage.setCurrentPage(currentPage);
+        userPage.setRows(rows);
+
+        UserDao userDao = new UserDaoImpl();
+
+        int totalCount = userDao.totalCount();
+        userPage.setTotalCount(totalCount);
+
+        int start = (currentPage - 1) * rows;
+        List<User> userList = userDao.findByPage(start, rows);
+        userPage.setList(userList);
+
+        int totalPage = (totalCount % rows) == 0 ? (totalCount / rows) : (totalCount / rows + 1);
+        userPage.setTotalPage(totalPage);
+
+        return userPage;
     }
 
 }

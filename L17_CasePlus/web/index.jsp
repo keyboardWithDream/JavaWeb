@@ -40,7 +40,7 @@
       <div class="jumbotron">
         <h1>欢迎!<small>Welcome!</small></h1>
         <p>查询所有用户名信息</p>
-        <p><a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/userListServlet" role="button">立即查询</a></p>
+        <p><a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/userPage" role="button">立即查询</a></p>
       </div>
     </div>
     <div class="col-md-1"></div>

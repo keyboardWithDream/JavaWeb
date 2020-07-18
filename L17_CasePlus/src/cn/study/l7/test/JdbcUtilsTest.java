@@ -41,4 +41,11 @@ public class JdbcUtilsTest {
         System.out.println(user);
         userDao.updateUser(user);
     }
+
+    @Test
+    public void totalCount(){
+        UserDao userDao = new UserDaoImpl();
+        int count = userDao.totalCount();
+        System.out.println(count);
+    }
 }

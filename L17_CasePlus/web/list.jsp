@@ -100,8 +100,8 @@
                 <th>邮箱</th>
                 <th colspan="2">操作</th>
             </tr>
-            <c:if test="${not empty users}">
-                <c:forEach items="${users}" var="user">
+            <c:if test="${not empty page.list}">
+                <c:forEach items="${page.list}" var="user">
                     <tr>
                         <td><input type="checkbox" name="ids" value="${user.id}"></td>
                         <td>${user.id}</td>
@@ -112,8 +112,7 @@
                         <td>${user.qq}</td>
                         <td>${user.email}</td>
                         <td>
-                            <a class="btn btn-default" href="${pageContext.request.contextPath}/findUser?id=${user.id}"
-                               id="update">修改</a>
+                            <a class="btn btn-default" href="${pageContext.request.contextPath}/findUser?id=${user.id}" id="update">修改</a>
                         </td>
                         <td>
                             <a class="btn btn-danger" href="javascript:deleteUser(${user.id});" id="delete">删除</a>
@@ -121,7 +120,7 @@
                     </tr>
                 </c:forEach>
             </c:if>
-            <c:if test="${empty users}">
+            <c:if test="${empty page.list}">
                 <tr>
                     <td colspan="9" align="center">目前暂无数据</td>
                 </tr>
@@ -131,22 +130,36 @@
     <div align="center">
         <nav aria-label="Page navigation">
             <ul class="pagination">
-                <li>
-                    <a href="#" aria-label="Previous">
+                <c:if test="${page.currentPage == 1}">
+                    <li class="disabled">
+                </c:if>
+                <c:if test="${page.currentPage != 1}">
+                    <li>
+                </c:if>
+                    <a href="${pageContext.request.contextPath}/userPage?currentPage=${page.currentPage-1}&rows=15" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
+                <c:forEach begin="1" end="${page.totalPage}" var="i">
+                    <c:if test="${i == page.currentPage}">
+                        <li class="active"><a href="${pageContext.request.contextPath}/userPage?currentPage=${i}&rows=15">${i}</a></li>
+                    </c:if>
+                    <c:if test="${i != page.currentPage}">
+                        <li><a href="${pageContext.request.contextPath}/userPage?currentPage=${i}&rows=15">${i}</a></li>
+                    </c:if>
+                </c:forEach>
+
+                <c:if test="${page.currentPage == page.totalPage}">
+                    <li class="disabled">
+                </c:if>
+                <c:if test="${page.currentPage != page.totalPage}">
+                    <li>
+                </c:if>
+                    <a href="${pageContext.request.contextPath}/userPage?currentPage=${page.currentPage+1}&rows=15" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
-                <span style="font-size: 25px; margin-left: 30px">共15条记录, 共4页</span>
+                <span style="font-size: 25px; margin-left: 30px">共${page.totalCount}条记录, 共${page.totalPage}页</span>
             </ul>
         </nav>
     </div>
