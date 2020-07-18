@@ -11,6 +11,19 @@
           <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/WEB-INF/lib/el-api.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/c3p0-0.9.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/commons-beanutils-1.8.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/commons-logging-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/druid-1.0.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/javax.servlet.jsp.jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/jstl-impl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/mysql-connector-java-5.1.18-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/spring-beans-4.2.4.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/spring-core-4.2.4.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/spring-jdbc-4.2.4.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/spring-tx-4.2.4.RELEASE.jar" />
+          <element id="library" level="module" name="JUnit4" module-name="L17_CasePlus" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/lib/mysql-connector-java-8.0.20.jar" />
         </element>
       </element>
     </root>
