@@ -118,10 +118,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 </body>
 <script>
-    <c:if test="${isSuccess == true}">
-    alert("添加成功！");
-    </c:if>
     window.onload = function () {
+        <c:if test="${isSuccess == true}">
+        alert("添加成功！");
+        </c:if>
         document.getElementById("insert").onclick = function () {
             document.getElementById("insert_div").style.display = "";
             document.getElementById("close").onclick = function () {

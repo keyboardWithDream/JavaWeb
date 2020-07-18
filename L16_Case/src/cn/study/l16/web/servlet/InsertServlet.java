@@ -36,7 +36,7 @@ public class InsertServlet extends HttpServlet {
         UserService service = new UserServiceImpl();
         boolean flag = service.insertUser(user);
         req.setAttribute("isSuccess",flag);
-        req.getRequestDispatcher("/info.jsp").forward(req, resp);
+        req.getRequestDispatcher("/userListServlet").forward(req, resp);
     }
 
     @Override
