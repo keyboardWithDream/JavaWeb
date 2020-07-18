@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="L17_CasePlus:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/L17_CasePlus_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="L17_CasePlus/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="L17_CasePlus" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/WEB-INF/lib/el-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/L17_CasePlus/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

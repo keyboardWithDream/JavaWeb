@@ -27,6 +27,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/L16_Case/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" />
+          <element id="library" level="module" name="JUnit4" module-name="L16_Case" />
         </element>
       </element>
     </root>
