@@ -23,6 +23,10 @@
     <script src="js/jquery-2.1.0.min.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        <!-- 表单校验 -->
+    </script>
 </head>
 <body>
 <div class="container">

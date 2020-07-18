@@ -28,4 +28,17 @@ public interface UserService {
      * @param user 用户
      */
     public void addUser(User user);
+
+    /**
+     * 删除用户
+     * @param id 用户ID
+     */
+    public void deleteUser(int id);
+
+    /**
+     * 通过id查询用户
+     * @param id 用户id
+     * @return 用户信息
+     */
+    public User findUserById(int id);
 }

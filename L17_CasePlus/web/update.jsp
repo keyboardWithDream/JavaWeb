@@ -6,7 +6,6 @@
 --%>
 <html lang="zh-CN">
 <head>
-    <base href="<%=basePath%>"/>
     <!-- 指定字符集 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,15 +15,14 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <div class="container" style="width: 400px;">
     <h3 style="text-align: center;">修改联系人</h3>
-    <form action="" method="post">
+    <form action="${pageContext.request.contextPath}/update" method="post">
         <div class="form-group">
             <label for="name">姓名：</label>
-            <input type="text" class="form-control" id="name" name="name"  readonly="readonly" placeholder="请输入姓名" />
+            <input type="text" class="form-control" id="name" name="name"  readonly="readonly" value="${user.name}" placeholder="请输入姓名" />
         </div>
 
         <div class="form-group">
@@ -40,7 +38,7 @@
 
         <div class="form-group">
             <label for="address">籍贯：</label>
-            <select name="address" id="address" class="form-control" >
+            <select name="address" id="address" class="form-control">
                 <option value="陕西">陕西</option>
                 <option value="北京">北京</option>
                 <option value="上海">上海</option>

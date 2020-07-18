@@ -5,6 +5,7 @@ import cn.study.l7.domain.User;
 import cn.study.l7.utils.JdbcUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import java.util.List;
 
@@ -43,6 +44,17 @@ public class UserDaoImpl implements UserDao {
     public void addUser(User user) {
         String sql = "INSERT INTO user VALUES(null,?,?,?,?,?,?,?,?)";
         template.update(sql,user.getName(),user.getGender(),user.getAge(),user.getAddress(),user.getQq(),user.getEmail(),user.getUsername(),user.getPassword());
+    }
 
+    @Override
+    public void deleteUser(int id) {
+        String sql = "DELETE FROM user WHERE id = ?";
+        template.update(sql, id);
+    }
+
+    @Override
+    public User findUserById(int id) {
+        String sql = "SELECT * FROM user WHERE id = ?";
+        return template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class),id);
     }
 }

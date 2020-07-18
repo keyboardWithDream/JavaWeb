@@ -29,6 +29,13 @@
             text-align: center;
         }
     </style>
+    <script>
+        function deleteUser(id) {
+            if (confirm("确定删除吗?")){
+                location.href = "${pageContext.request.contextPath}/delete?id="+id;
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -96,10 +103,10 @@
                     <td>${user.qq}</td>
                     <td>${user.email}</td>
                     <td>
-                        <button type="button" class="btn btn-default" id="update">修改</button>
+                        <a class="btn btn-default" href="${pageContext.request.contextPath}/findUser?id=${user.id}" id="update">修改</a>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-danger" id="delete">删除</button>
+                        <a class="btn btn-danger" href="javascript:deleteUser(${user.id});" id="delete">删除</a>
                     </td>
                 </tr>
             </c:forEach>

@@ -32,4 +32,16 @@ public class UserServiceImpl implements UserService {
         userDao.addUser(user);
     }
 
+    @Override
+    public void deleteUser(int id) {
+        UserDao userDao = new UserDaoImpl();
+        userDao.deleteUser(id);
+    }
+
+    @Override
+    public User findUserById(int id) {
+        UserDao userDao = new UserDaoImpl();
+        return userDao.findUserById(id);
+    }
+
 }
