@@ -3,6 +3,7 @@ package cn.study.l7.dao;
 import cn.study.l7.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Harlan
@@ -51,14 +52,16 @@ public interface UserDao {
     /**
      * 返回用户数据总条数
      * @return 条数
+     * @param conditions
      */
-    public int totalCount();
+    public int totalCount(Map<String, String[]> conditions);
 
     /**
      * 分页查询每页记录
      * @param start 开始索引
      * @param rows 条数
+     * @param conditions
      * @return 查询的信息
      */
-    public List<User> findByPage(int start, int rows);
+    public List<User> findByPage(int start, int rows, Map<String, String[]> conditions);
 }

@@ -5,9 +5,10 @@ import cn.study.l7.domain.User;
 import cn.study.l7.utils.JdbcUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Harlan
@@ -65,14 +66,43 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public int totalCount() {
-        String sql = "SELECT COUNT(*) FROM user";
-        return template.queryForObject(sql, Integer.class);
+    public int totalCount(Map<String, String[]> conditions) {
+        String sql = "SELECT COUNT(*) FROM user WHERE 1 = 1";
+        StringBuilder sb = new StringBuilder(sql);
+        List<Object> params = new ArrayList<>();
+        for (String key : conditions.keySet()) {
+            String value = conditions.get(key)[0];
+            if ("currentPage".equals(key) || "rows".equals(key)){
+                continue;
+            }
+            if (value != null && !"".equals(value)){
+                sb.append(" AND " + key + " LIKE ?");
+                params.add("%"+value+"%");
+            }
+        }
+        System.out.println(sb.toString());
+        System.out.println(params);
+        return template.queryForObject(sb.toString() , Integer.class, params.toArray());
     }
 
     @Override
-    public List<User> findByPage(int start, int rows) {
-        String sql = "SELECT * FROM user LIMIT ? , ?";
-        return template.query(sql, new BeanPropertyRowMapper<User>(User.class),start,rows);
+    public List<User> findByPage(int start, int rows, Map<String, String[]> conditions) {
+        String sql = "SELECT * FROM user WHERE 1 = 1";
+        StringBuilder sb = new StringBuilder(sql);
+        List<Object> params = new ArrayList<>();
+        for (String key : conditions.keySet()) {
+            String value = conditions.get(key)[0];
+            if ("currentPage".equals(key) || "rows".equals(key)){
+                continue;
+            }
+            if (value != null && !"".equals(value)){
+                sb.append(" AND " + key + " LIKE ?");
+                params.add("%"+value+"%");
+            }
+        }
+        sb.append(" LIMIT ? , ?");
+        params.add(start);
+        params.add(rows);
+        return template.query(sb.toString(), new BeanPropertyRowMapper<User>(User.class),params.toArray());
     }
 }

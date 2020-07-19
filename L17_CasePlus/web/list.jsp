@@ -49,7 +49,7 @@
 <div class="container">
     <h3 style="text-align: center">用户信息列表</h3>
     <div style="float: left; margin: 5px">
-        <form class="form-inline">
+        <form class="form-inline" action="${pageContext.request.contextPath}/userPage" method="post">
             <div class="form-group">
                 <label for="exampleInputName2">姓名</label>
                 <input type="text" class="form-control" id="exampleInputName2" name="name" maxlength="30" size="8"

@@ -7,6 +7,7 @@ import cn.study.l7.domain.User;
 import cn.study.l7.web.service.UserService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Harlan
@@ -60,7 +61,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<User> findUsersByPage(String _currentPage, String _rows) {
+    public Page<User> findUsersByPage(String _currentPage, String _rows, Map<String, String[]> conditions) {
         int currentPage = Integer.parseInt(_currentPage);
         int rows = Integer.parseInt(_rows);
         Page<User> userPage = new Page<>();
@@ -69,11 +70,12 @@ public class UserServiceImpl implements UserService {
 
         UserDao userDao = new UserDaoImpl();
 
-        int totalCount = userDao.totalCount();
+        int totalCount = userDao.totalCount(conditions);
         userPage.setTotalCount(totalCount);
 
         int start = (currentPage - 1) * rows;
-        List<User> userList = userDao.findByPage(start, rows);
+        List<User> userList = userDao.findByPage(start, rows, conditions);
+        System.out.println(userList);
         userPage.setList(userList);
 
         int totalPage = (totalCount % rows) == 0 ? (totalCount / rows) : (totalCount / rows + 1);

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * @author Harlan
@@ -30,8 +31,11 @@ public class FindUsersByPageServlet extends HttpServlet {
         if (rows == null || "".equals(rows)){
             rows = "15";
         }
+        Map<String, String[]> condtions = req.getParameterMap();
+
         UserService service = new UserServiceImpl();
-        Page<User> page = service.findUsersByPage(currentPage, rows);
+        Page<User> page = service.findUsersByPage(currentPage, rows, condtions);
+        System.out.println(page);
         req.setAttribute("page", page);
         req.getRequestDispatcher("/list.jsp").forward(req, resp);
     }

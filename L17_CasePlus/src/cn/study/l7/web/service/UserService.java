@@ -4,6 +4,7 @@ import cn.study.l7.domain.Page;
 import cn.study.l7.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Harlan
@@ -59,7 +60,9 @@ public interface UserService {
      * 分页查询
      * @param currentPage 当前页码
      * @param rows 每页显示行数
+     * @param conditions 查询条件
      * @return PageBean
      */
-    public Page<User> findUsersByPage(String currentPage, String rows);
+    public Page<User> findUsersByPage(String currentPage, String rows, Map<String, String[]> conditions);
+
 }
