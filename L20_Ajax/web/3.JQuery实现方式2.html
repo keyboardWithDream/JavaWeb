@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>$.get()</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        function send() {
+            $.get("ajaxServlet",{username:"Harlan"},function (data) {
+                alert(data);
+            },"text/html");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="send()">
+<input>
+</body>
+</html>
