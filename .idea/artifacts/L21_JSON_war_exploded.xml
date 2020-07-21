@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="L21_JSON:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/L21_JSON_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="L21_JSON/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="L21_JSON" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="JUnit4" module-name="L21_JSON" />
+          <element id="library" level="project" name="Jackson" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
