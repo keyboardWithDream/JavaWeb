@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#username").blur(function () {
+                const username = this.val();
+                $.post("findUserServlet", {"username":username}, function (data) {
+                    const span = $("#s_username");
+                    const text =$("#s_text");
+                    if (data.userExsit){
+                        span.css("display","block");
+                        text.html(data.msg);
+                        span.addClass("success");
+                    }else {
+                        span.css("display","block");
+                        text.html(data.msg);
+                        span.addClass("fail");
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        .success {
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+            background-color: green;
+        }
+
+        .fail{
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="text" name="username" id="username" placeholder="请输入用户名">
+    <span id="s_username" style="display: none"></span>
+    <span id="s_text"></span>
+    <br>
+    <input type="password" name="password" placeholder="请输入密码">
+    <br>
+    <input type="submit" value="立即注册">
+</form>
+</body>
+</html>
