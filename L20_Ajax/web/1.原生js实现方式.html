@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>原生JS实现异步方式</title>
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="send();">
+<input id="show" type="text">
+</body>
+<script>
+    function send() {
+        //发送异步请求
+        //1.创建核心对象
+        var xmlhttp;
+        if (window,XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest();
+        }else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        //2.建立链接 参数: 请求方式 + 资源路径 + 同步或异步(T or F)
+        xmlhttp.open("GET", "ajaxServlet?username=tom", true);
+
+        //3.发送请求
+        xmlhttp.send();
+
+        //4. 接收并处理来自服务器的响应结果
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                document.getElementById("show").value = xmlhttp.responseText;
+            }
+        }
+    }
+</script>
+</html>
