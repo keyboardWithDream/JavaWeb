@@ -7,7 +7,7 @@
     <script>
         $(function () {
             $("#username").blur(function () {
-                const username = this.val();
+                const username = $("#username").val();
                 $.post("findUserServlet", {"username":username}, function (data) {
                     const span = $("#s_username");
                     const text =$("#s_text");
