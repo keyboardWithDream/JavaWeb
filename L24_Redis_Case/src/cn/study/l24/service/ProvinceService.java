@@ -15,4 +15,11 @@ public interface ProvinceService {
      * @return 所有城市的List
      */
     public List<Province> findAll();
+
+    /**
+     * 查询所有城市返回Json数据
+     * 便于Redis缓存操作
+     * @return Json 数据
+     */
+    public String findAllJson();
 }

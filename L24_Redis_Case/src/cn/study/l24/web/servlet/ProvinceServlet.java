@@ -22,9 +22,7 @@ public class ProvinceServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProvinceServiceImpl service = new ProvinceServiceImpl();
-        List<Province> provinces = service.findAll();
-        ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(provinces);
+        String json = service.findAllJson();
         resp.setContentType("application/json; charset=UTF-8");
         resp.getWriter().write(json);
     }

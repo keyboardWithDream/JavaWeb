@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Jedis (2)">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/L24_Redis_Case/web/WEB-INF/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/L24_Redis_Case/web/WEB-INF/lib" recursive="false" />
+  </library>
+</component>
