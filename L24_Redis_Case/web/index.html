@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Case</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+           $.post("province",{},function (data) {
+               const select = $("#province");
+               $(data).each(function () {
+                   const option = "<option name='"+ this.id +"'>"+this.name +"</option>";
+                   select.append(option);
+               });
+           });
+        });
+    </script>
+</head>
+<body>
+<select id="province">
+    <option>--请选择省份--</option>
+</select>
+</body>
+</html>
