@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/L20_Ajax/L20_Ajax.iml" filepath="$PROJECT_DIR$/L20_Ajax/L20_Ajax.iml" />
       <module fileurl="file://$PROJECT_DIR$/L21_JSON/L21_JSON.iml" filepath="$PROJECT_DIR$/L21_JSON/L21_JSON.iml" />
       <module fileurl="file://$PROJECT_DIR$/L22_CheckUser_Case/L22_CheckUser_Case.iml" filepath="$PROJECT_DIR$/L22_CheckUser_Case/L22_CheckUser_Case.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L23_Jedis/L23_Jedis.iml" filepath="$PROJECT_DIR$/L23_Jedis/L23_Jedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/L2_Servlet&amp;HTTP/L2_Servlet&amp;HTTP.iml" filepath="$PROJECT_DIR$/L2_Servlet&amp;HTTP/L2_Servlet&amp;HTTP.iml" />
       <module fileurl="file://$PROJECT_DIR$/L3_Request/L3_Request.iml" filepath="$PROJECT_DIR$/L3_Request/L3_Request.iml" />
       <module fileurl="file://$PROJECT_DIR$/L4_Login_Case/L4_Login_Case.iml" filepath="$PROJECT_DIR$/L4_Login_Case/L4_Login_Case.iml" />
