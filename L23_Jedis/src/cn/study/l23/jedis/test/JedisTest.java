@@ -1,10 +1,8 @@
 package cn.study.l23.jedis.test;
 
+import cn.study.l23.jedis.util.JedisPoolUtils;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Jedis测试类
@@ -24,5 +22,16 @@ public class JedisTest {
         System.out.println(username);
         //3.关闭
         jedis.close();
+    }
+
+    /**
+     * 测试连接池工具类
+     */
+    @Test
+    public void pool(){
+        Jedis jedis = JedisPoolUtils.getJedis();
+        String username = jedis.get("username");
+        System.out.println(username);
+        JedisPoolUtils.close(jedis);
     }
 }
